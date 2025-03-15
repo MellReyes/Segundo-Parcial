@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Monarch Bienes Raíces - Encuentra tu hogar ideal">
+    <meta name="keywords" content="bienes raíces, propiedades, venta, alquiler, casas, apartamentos">
+    <meta name="author" content="Monarch Bienes Raíces">
+    <title>Monarch Bienes Raíces</title>
+    <link rel="icon" href="assets/logo-monarch.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: rgba(248, 213, 221, 0.8); padding: 15px 30px;">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="#" style="font-size: 1.5rem; font-family: 'Poppins', sans-serif;">
+                    <img src="assets/logo-monarch.png" alt="Monarch Logo" width="40" height="40" class="d-inline-block align-text-top me-2">
+                    Monarch Bienes Raíces
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html" style="transition: 0.3s;">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="propiedades.html" style="transition: 0.3s;">Propiedades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="vender.html" style="transition: 0.3s;">Vender</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html" style="transition: 0.3s;">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html" style="transition: 0.3s;">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html" style="transition: 0.3s;">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <style>
+        .navbar-nav .nav-link {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: white;
+            position: relative;
+        }
+    
+        .navbar-nav .nav-link:hover {
+            color: #ec93bb;
+        }
+    
+        .navbar-nav .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 3px;
+            background: #ec93bb;
+            transition: width 0.3s;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+        }
+    
+        .navbar-nav .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+    
+    <!-- Carrusel -->
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/casa1.jpg" class="d-block w-100" alt="Casa 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Casa Arroyo Hondo</h5>
+                    <p>Hermosa casa rodeada de bellos lugares e importantes avenidas.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="assets/casa2.jpg" class="d-block w-100" alt="Casa 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Villa en Santiago</h5>
+                    <p>Moderna villa en el corazón de la isla.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="assets/casa3.jpg" class="d-block w-100" alt="Casa 3">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Casa de Campestre</h5>
+                    <p>Acogedora casa en Bavaro.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Sección principal -->
+    <main class="container mt-5">
+        <h1 class="text-center">Bienvenido a Monarch Bienes Raíces</h1>
+        <p class="text-center">Encuentra la propiedad de tus sueños con nosotros.</p>
+
+        <!-- Botón de Modo Oscuro -->
+        <div class="text-center">
+            <button id="dark-mode-button" class="btn-dark-mode mt-3" onclick="toggleDarkMode()">
+                <i class="bi bi-moon-fill"></i> Modo Oscuro
+            </button>
+        </div>
+
+        <!-- FlexGrid de Propiedades Destacadas -->
+        <section class="featured-properties">
+            <h2 class="text-center mb-4">Propiedades Destacadas</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="IMG_7982.jpeg" class="card-img-top" alt="Casa 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Casa en la Playa</h5>
+                            <p class="card-text">Hermosa casa frente al mar con vista panorámica.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detallesModal1">
+                                <i class="bi bi-eye-fill"></i> Ver Detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="IMG_7981.jpeg" class="card-img-top" alt="Casa 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Apartamento en la Ciudad</h5>
+                            <p class="card-text">Moderno apartamento en el corazón de la ciudad.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detallesModal2">
+                                <i class="bi bi-eye-fill"></i> Ver Detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="IMG_7980.jpeg" class="card-img-top" alt="Casa 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Casa de Campo</h5>
+                            <p class="card-text">Acogedora casa en el campo con amplios jardines.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detallesModal3">
+                                <i class="bi bi-eye-fill"></i> Ver Detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Beneficios -->
+        <section class="benefits mt-5">
+            <h2 class="text-center mb-4">¿Por qué elegir Monarch?</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="benefit-card text-center">
+                        <i class="bi bi-person-check fs-1"></i>
+                        <h3>Asesoramiento Personalizado</h3>
+                        <p>Nuestros expertos te guiarán en cada paso.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="benefit-card text-center">
+                        <i class="bi bi-shield-check fs-1"></i>
+                        <h3>Transparencia y Seguridad</h3>
+                        <p>Procesos claros y seguros para tu tranquilidad.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="benefit-card text-center">
+                        <i class="bi bi-award fs-1"></i>
+                        <h3>Más de 10 años de experiencia</h3>
+                        <p>Confía en líderes del mercado inmobiliario.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Testimonios -->
+        <section class="testimonials mt-5">
+            <h2 class="text-center mb-4">Testimonios</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <p>"Excelente servicio, encontré mi hogar ideal."</p>
+                        <p>- Juan Pérez</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <p>"Gracias a Monarch, vendí mi propiedad rápidamente."</p>
+                        <p>- María Gómez</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <p>"Asesoramiento profesional y muy amable."</p>
+                        <p>- Carlos López</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Llamado a la Acción (CTA) -->
+        <section class="cta mt-5 text-center">
+            <h2>¿Listo para encontrar tu hogar ideal?</h2>
+            <p>Contáctanos hoy mismo y uno de nuestros asesores te ayudará.</p>
+            <a href="contacto.html" class="btn btn-primary btn-lg">
+                <i class="bi bi-headset"></i> Contactar Asesor
+            </a>
+        </section>
+    </main>
+
+    <!-- Modales para Ver Detalles -->
+    <!-- Modal 1 -->
+    <div class="modal fade" id="detallesModal1" tabindex="-1" aria-labelledby="detallesModalLabel1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="detallesModalLabel1">Casa en la Playa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Hermosa casa frente al mar con vista panorámica. Perfecta para vacaciones o vivir todo el año.</p>
+                    <p><strong>Precio:</strong> $500,000</p>
+                    <p><strong>Ubicación:</strong> Playa XYZ</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal fade" id="detallesModal2" tabindex="-1" aria-labelledby="detallesModalLabel2" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="detallesModalLabel2">Apartamento en la Ciudad</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Moderno apartamento en el corazón de la ciudad, cerca de todos los servicios y comodidades.</p>
+                    <p><strong>Precio:</strong> $300,000</p>
+                    <p><strong>Ubicación:</strong> Ciudad XYZ</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal fade" id="detallesModal3" tabindex="-1" aria-labelledby="detallesModalLabel3" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="detallesModalLabel3">Casa de Campo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Acogedora casa en el campo con amplios jardines, ideal para relajarse y disfrutar de la naturaleza.</p>
+                    <p><strong>Precio:</strong> $400,000</p>
+                    <p><strong>Ubicación:</strong> Campo XYZ</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</head>
+<body></body>
+
+   
+
+
+   <!-- Iframe Ubicación de Ejemplo -->
+<section class="container mt-5 section-container p-4 bg-light shadow rounded">
+    <h2 class="text-center text-primary fw-bold mb-4">📍 Nuestra Ubicación</h2>
+    <div class="text-center mb-3">
+        <p class="text-muted">Visítanos en nuestras oficinas. ¡Estamos aquí para ayudarte!</p>
+    </div>
+    <div class="ratio ratio-16x9 rounded shadow-lg">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.984576074738!2d-74.00601538459312!3d40.71277527932871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzQ2LjAiTiA3NMKwMDAnMjMuOSJX!5e0!3m2!1sen!2sus!4v1610000000000" 
+            class="w-100 h-100 border-0 rounded" allowfullscreen="" loading="lazy">
+        </iframe>
+    </div>
+</section>
+
+
+
+
+ <!-- Términos y Condiciones -->
+ <section class="container mt-5 section-container p-4 bg-light shadow rounded">
+    <h2 class="text-center text-primary fw-bold">Términos y Condiciones</h2>
+    <p class="text-center text-muted">Bienvenido a <strong>Monarch Bienes Raíces</strong>. Al acceder y utilizar nuestro sitio web, aceptas cumplir con los siguientes términos y condiciones:</p>
+    <div class="p-3">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item border-0">
+                <i class="fas fa-exclamation-circle text-danger"></i> No nos hacemos responsables de errores en la información de propiedades.
+            </li>
+            <li class="list-group-item border-0">
+                <i class="fas fa-file-contract text-primary"></i> El contenido del sitio es solo informativo y no constituye una oferta legal.
+            </li>
+            <li class="list-group-item border-0">
+                <i class="fas fa-sync-alt text-success"></i> Nos reservamos el derecho de modificar estos términos sin previo aviso.
+            </li>
+        </ul>
+    </div>
+</section>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-5">
+        <div class="container py-4">
+            <p class="text-center">&copy; 2023 Monarch Bienes Raíces. Todos los derechos reservados.</p>
+            <div class="text-center">
+                <a href="https://facebook.com/monarchbienesraices" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                <a href="https://twitter.com/monarchbienes" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+                <a href="https://instagram.com/monarchbienesraices" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

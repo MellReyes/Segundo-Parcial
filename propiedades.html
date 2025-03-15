@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explora las mejores propiedades con Monarch Bienes Raíces">
+    <title>Propiedades - Monarch Bienes Raíces</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body { color: #333333 !important; }
+        .property-card img { height: 200px; object-fit: cover; }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="logo-monarch.png" alt="Monarch Logo" width="40" height="40" class="me-2">
+                    Monarch Bienes Raíces
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="propiedades.html">Propiedades</a></li>
+                        <li class="nav-item"><a class="nav-link" href="vender.html">Vender</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero d-flex align-items-center text-grey text-center" style="background: url('hero-propiedades.jpg') center/cover; height: 50vh;">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Propiedades Disponibles</h1>
+            <p class="lead">Encuentra la propiedad perfecta para ti.</p>
+        </div>
+    </section>
+    
+    <!-- Filtros de Búsqueda -->
+    <section class="py-4 bg-light">
+        <div class="container">
+            <div class="row g-2">
+                <div class="col-md-3"><input type="text" class="form-control" placeholder="Ubicación"></div>
+                <div class="col-md-3">
+                    <select class="form-control">
+                        <option value="">Tipo de Propiedad</option>
+                        <option value="casa">Casa</option>
+                        <option value="apartamento">Apartamento</option>
+                        <option value="terreno">Terreno</option>
+                    </select>
+                </div>
+                <div class="col-md-3"><input type="number" class="form-control" placeholder="Precio Máximo"></div>
+                <div class="col-md-3"><button class="btn btn-primary w-100">Buscar</button></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Propiedades -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card property-card border-0 shadow">
+                        <img src="IMG_8102.jpeg
+                        " class="card-img-top" alt="Casa en la Playa">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Casa en la Playa</h5>
+                            <p class="text-muted">$500,000</p>
+                            <a href="#" class="btn btn-outline-primary">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card property-card border-0 shadow">
+                        <img src="IMG_8105.jpeg
+                        " class="card-img-top" alt="Apartamento en la Ciudad">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Apartamento en la Ciudad</h5>
+                            <p class="text-muted">$350,000</p>
+                            <a href="#" class="btn btn-outline-primary">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card property-card border-0 shadow">
+                        <img src="terreno1.jpg" class="card-img-top" alt="Terreno en las Afueras">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Terreno en las Afueras</h5>
+                            <p class="text-muted">$120,000</p>
+                            <a href="#" class="btn btn-outline-primary">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- Iframe Video de YouTube sobre Venta de Inmuebles -->
+     <section class="container mt-5 section-container">
+        <h2 class="text-center">Consejos para Comprar una Propiedad</h2>
+        <iframe width="95%" height="400" src="https://www.youtube.com/embed/Kp5EbMIe1gQ"title="Consejos de compra" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 10px;"></iframe>
+    </section>
+</body>
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2025 Monarch Bienes Raíces. Todos los derechos reservados.</p>
+            <div class="mt-2">
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

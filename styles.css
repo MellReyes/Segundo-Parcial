@@ -1,0 +1,144 @@
+/* Paleta de colores cálidos */
+:root {
+    --color-primary: #FF6F61; /* Coral */
+    --color-secondary: #FFA07A; /* Salmón */
+    --color-background: #FFF8E7; /* Beige claro */
+    --color-text: #4A4A4A; /* Gris oscuro */
+    --color-accent: #FFD700; /* Dorado */
+    --color-dark-background: #1E1E1E; /* Fondo oscuro en modo oscuro */
+    --color-dark-text: #242121; /* Texto blanco en modo oscuro */
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+    background-color: var(--color-dark-background);
+    color: var(--color-dark-text);
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: var(--color-primary);
+    transition: background-color 0.3s ease;
+}
+
+.navbar-brand {
+    color: var(--color-text) !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link {
+    color: var(--color-text) !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--color-accent) !important;
+}
+
+/* Cambiar el color del texto en modo oscuro */
+body.dark-mode .navbar-brand,
+body.dark-mode .nav-link,
+body.dark-mode .card-title,
+body.dark-mode .card-text,
+body.dark-mode .benefit-card h3,
+body.dark-mode .benefit-card p,
+body.dark-mode .testimonial-card p,
+body.dark-mode .cta h2,
+body.dark-mode .cta p,
+body.dark-mode footer,
+body.dark-mode footer a,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode p {
+    color: var(--color-dark-text) !important; /* Texto blanco en modo oscuro */
+}
+
+/* Carrusel */
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* FlexGrid de Propiedades Destacadas */
+.card {
+    background-color:rgb(236, 209, 214);
+    border: 1px solid var(--color-secondary);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    color: var(--color-primary);
+}
+
+.card-text {
+    color: var(--color-text);
+}
+
+/* Sección de Beneficios */
+.benefit-card {
+    background-color: #f1b6c9;
+    ;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.benefit-card i {
+    color: var(--color-primary);
+}
+
+/* Testimonios */
+.testimonial-card {
+    background-color: #f1b6c9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Llamado a la Acción (CTA) */
+.cta {
+    background-color: var(--color-primary);
+    padding: 40px 20px;
+    border-radius: 10px;
+    color: var(--color-dark-text);
+}
+
+.cta .btn-primary {
+    background-color: var(--color-accent);
+    border: none;
+    color: var(--color-text);
+}
+
+.cta .btn-primary:hover {
+    background-color: var(--color-secondary);
+}
+
+/* Footer
